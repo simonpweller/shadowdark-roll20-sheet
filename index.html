@@ -1,0 +1,59 @@
+<main>
+    <section class="header">
+        <h1>ShadowDark</h1>
+    </section>
+    <section class="attributes">
+        <div class="row">
+            <div class="col">
+                <label for="strength">STR</label>
+                <input type="number" name="attr_strength" id="strength" value="10"> / <span name="attr_strength_mod">0</span>
+                <button type="roll" name="roll_strength" value="[[d20+@{strength_mod}]]"></button>
+            </div>
+            <div class="col">
+                <label for="intelligence">INT</label>
+                <input type="number" name="attr_intelligence" id="intelligence" value="10"> / <span name="attr_intelligence_mod">0</span>
+                <button type="roll" name="roll_intelligence" value="[[d20+@{intelligence_mod}]]"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="dexterity">DEX</label>
+                <input type="number" name="attr_dexterity" id="dexterity" value="10"> / <span name="attr_dexterity_mod">0</span>
+                <button type="roll" name="roll_dexterity" value="[[d20+@{dexterity_mod}]]"></button>
+            </div>
+            <div class="col">
+                <label for="wisdom">WIS</label>
+                <input type="number" name="attr_wisdom" id="wisdom" value="10"> / <span name="attr_wisdom_mod">0</span>
+                <button type="roll" name="roll_wisdom" value="[[d20+@{wisdom_mod}]]"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="constitution">CON</label>
+                <input type="number" name="attr_constitution" id="constitution" value="10"> / <span name="attr_constitution_mod">0</span>
+                <button type="roll" name="roll_constitution" value="[[d20+@{constitution_mod}]]"></button>
+            </div>
+            <div class="col">
+                <label for="charisma">CHA</label>
+                <input type="number" name="attr_charisma" id="charisma" value="10"> / <span name="attr_charisma_mod">0</span>
+                <button type="roll" name="roll_charisma" value="[[d20+@{charisma_mod}]]"></button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script type="text/worker">
+    const int = (score) => parseInt(score, 10) || 0
+
+    const stats = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']
+
+    stats.forEach(stat => {
+        on(`change:${stat}`, () => {
+            getAttrs([stat], values => {
+                const stat_base = int(values[stat])
+                const mod = Math.floor((stat_base - 10) / 2)
+                setAttrs({ [`${stat}_mod`]: mod })
+            })
+        })
+    })
+</script>
