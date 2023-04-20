@@ -2,6 +2,10 @@
     <section class="header">
         <h1>ShadowDark</h1>
     </section>
+    <section class="name labeled_input">
+        <label for="name">Name</label>
+        <input class="full_width" type="text" name="attr_name" id="name">
+    </section>
     <section class="attributes">
         <div class="attribute strength">
             <label class="attribute_label" for="strength">STR</label>
@@ -46,7 +50,28 @@
             </div>
         </div>
     </section>
-    <section class="info">Info</section>
+    <section class="info">
+        <div class="ancestry labeled_input">
+            <label for="ancestry">Ancestry</label>
+            <input class="full_width" type="text" name="attr_ancestry" id="ancestry">
+        </div>
+        <div class="class labeled_input">
+            <label for="class">Class</label>
+            <input class="full_width" type="text" name="attr_class" id="class">
+        </div>
+        <div class="experience">
+            <div class="labeled_input">
+                <label for="level">Level</label>
+                <input class="full_width" type="number" name="attr_level" id="level" value="1">
+            </div>
+            <div class="labeled_input">
+                <label for="xp">XP</label>
+                <div class="xp">
+                    <input type="number" name="attr_xp" id="xp" value="0"> / <input type="number" name="attr_xp_next" value="10"/>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="defenses">Defenses</section>
     <section class="title">Title</section>
 </main>
