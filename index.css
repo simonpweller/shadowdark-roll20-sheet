@@ -1,0 +1,72 @@
+main {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid-gap: 4px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas:"header       header"
+                        "attributes   info  "
+                        "defenses     title ";
+}
+
+.header {
+    grid-area: header;
+}
+
+.attributes {
+    margin: 0;
+    grid-area: attributes;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"str int"
+                        "dex wis"
+                        "con cha";
+}
+
+.attribute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 3px solid black;
+    padding: 2px 8px;
+}
+
+.strength {
+    grid-area: str;
+}
+
+.dexterity {
+    grid-area: dex;
+}
+
+.constitution {
+    grid-area: con;
+}
+
+.intelligence {
+    grid-area: int;
+}
+
+.wisdom {
+    grid-area: wis;
+}
+
+.charisma {
+    grid-area: cha;
+}
+
+.info {
+    grid-area: info;
+}
+
+.defenses {
+    grid-area: defenses;
+}
+
+.title {
+    grid-area: title;
+}

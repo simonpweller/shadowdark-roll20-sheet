@@ -3,43 +3,52 @@
         <h1>ShadowDark</h1>
     </section>
     <section class="attributes">
-        <div class="row">
-            <div class="col">
-                <label for="strength">STR</label>
+        <div class="attribute strength">
+            <label class="attribute_label" for="strength">STR</label>
+            <div class="attribute_controls">
                 <input type="number" name="attr_strength" id="strength" value="10"> / <span name="attr_strength_mod">0</span>
                 <button type="roll" name="roll_strength" value="[[d20+@{strength_mod}]]"></button>
             </div>
-            <div class="col">
-                <label for="intelligence">INT</label>
+        </div>
+        <div class="attribute dexterity">
+            <label class="attribute_label" for="dexterity">DEX</label>
+            <div class="attribute_controls">
+                <input type="number" name="attr_dexterity" id="dexterity" value="10"> / <span name="attr_dexterity_mod">0</span>
+                <button type="roll" name="roll_dexterity" value="[[d20+@{dexterity_mod}]]"></button>
+            </div>
+        </div>
+        <div class="attribute constitution">
+            <label class="attribute_label" for="constitution">CON</label>
+            <div class="attribute_controls">
+                <input type="number" name="attr_constitution" id="constitution" value="10"> / <span name="attr_constitution_mod">0</span>
+                <button type="roll" name="roll_constitution" value="[[d20+@{constitution_mod}]]"></button>
+            </div>
+        </div>
+        <div class="attribute intelligence">
+            <label class="attribute_label" for="intelligence">INT</label>
+            <div class="attribute_controls">
                 <input type="number" name="attr_intelligence" id="intelligence" value="10"> / <span name="attr_intelligence_mod">0</span>
                 <button type="roll" name="roll_intelligence" value="[[d20+@{intelligence_mod}]]"></button>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <label for="dexterity">DEX</label>
-                <input type="number" name="attr_dexterity" id="dexterity" value="10"> / <span name="attr_dexterity_mod">0</span>
-                <button type="roll" name="roll_dexterity" value="[[d20+@{dexterity_mod}]]"></button>
-            </div>
-            <div class="col">
-                <label for="wisdom">WIS</label>
+        <div class="attribute wisdom">
+            <label class="attribute_label" for="wisdom">WIS</label>
+            <div class="attribute_controls">
                 <input type="number" name="attr_wisdom" id="wisdom" value="10"> / <span name="attr_wisdom_mod">0</span>
                 <button type="roll" name="roll_wisdom" value="[[d20+@{wisdom_mod}]]"></button>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <label for="constitution">CON</label>
-                <input type="number" name="attr_constitution" id="constitution" value="10"> / <span name="attr_constitution_mod">0</span>
-                <button type="roll" name="roll_constitution" value="[[d20+@{constitution_mod}]]"></button>
-            </div>
-            <div class="col">
-                <label for="charisma">CHA</label>
+        <div class="attribute charisma">
+            <label class="attribute_label" for="charisma">CHA</label>
+            <div class="attribute_controls">
                 <input type="number" name="attr_charisma" id="charisma" value="10"> / <span name="attr_charisma_mod">0</span>
                 <button type="roll" name="roll_charisma" value="[[d20+@{charisma_mod}]]"></button>
             </div>
         </div>
     </section>
+    <section class="info">Info</section>
+    <section class="defenses">Defenses</section>
+    <section class="title">Title</section>
 </main>
 
 <script type="text/worker">
