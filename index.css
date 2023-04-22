@@ -2,12 +2,12 @@ main {
     display: grid;
     width: 600px;
     height: 600px;
-    grid-gap: 15px;
+    grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 3fr;
-    grid-template-areas:"header       name"
-                        "attributes   info  "
-                        "defenses     title ";
+    grid-template-areas:"header     name"
+                        "attributes info"
+                        "defenses   background";
 }
 
 .header {
@@ -22,7 +22,7 @@ main {
     margin: 0;
     grid-area: attributes;
     display: grid;
-    grid-gap: 15px;
+    grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:"str int"
@@ -42,14 +42,14 @@ main {
 .info {
     grid-area: info;
     display: grid;
-    grid-gap: 15px;
+    grid-gap: 10px;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
 }
 
 .experience {
     display: grid;
-    grid-gap: 15px;
+    grid-gap: 10px;
     grid-template-columns: 1fr 2fr;
 }
 
@@ -87,12 +87,38 @@ main {
     grid-area: info;
 }
 
-.defenses {
+.combat {
     grid-area: defenses;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:"ac      hp"
+                        "attacks attacks";
 }
 
-.title {
-    grid-area: title;
+.ac {
+    grid-area: ac;
+}
+
+.hp {
+    grid-area: hp;
+}
+
+.attacks {
+    grid-area: attacks;
+}
+
+#attacks {
+    height: 100%;
+    width: calc(100% - 10px);
+}
+
+.background {
+    grid-area: background;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .labeled_input {
