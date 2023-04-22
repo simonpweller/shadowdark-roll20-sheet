@@ -1,18 +1,18 @@
 main {
     display: grid;
-    width: 500px;
+    width: 900px;
     height: 600px;
     grid-gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) 3fr;
     grid-template-rows: repeat(8, 1fr);
-    grid-template-areas:"header     header     name       name      "
-                        "attributes attributes info       info      "
-                        "attributes attributes info       info      "
-                        "attributes attributes info       info      "
-                        "ac         hp         background background"
-                        "attacks    attacks    background background"
-                        "attacks    attacks    background background"
-                        "attacks    attacks    background background";
+    grid-template-areas:"header     header     name       name       talents"
+                        "attributes attributes info       info       talents"
+                        "attributes attributes info       info       talents"
+                        "attributes attributes info       info       talents"
+                        "ac         hp         background background gear   "
+                        "attacks    attacks    background background gear   "
+                        "attacks    attacks    background background gear   "
+                        "attacks    attacks    background background gear   ";
 }
 
 .header {
@@ -108,7 +108,7 @@ main {
     grid-area: attacks;
 }
 
-#attacks {
+.largedialog textarea {
     height: 100%;
     width: calc(100% - 10px);
     margin-bottom: 0;
@@ -120,6 +120,10 @@ main {
     display: grid;
     grid-gap: 5px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.talents {
+    grid-area: talents;
 }
 
 .labeled_input {
