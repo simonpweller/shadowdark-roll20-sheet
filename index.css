@@ -126,6 +126,69 @@ main {
     grid-area: talents;
 }
 
+.gear {
+    grid-area: gear;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 1fr 3fr;
+}
+
+.equipment {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.equipment-header {
+    width: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.coin-field {
+    display: flex;
+    align-items: center;
+}
+
+.equipment .row {
+    display: flex;
+    margin: 0;
+}
+
+.equipment label {
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipment input {
+    width: 90px;
+    font-size: 10px;
+}
+
+.equipment input {
+    padding: 2px;
+}
+
+#free_to_carry {
+    margin-top: 0;
+}
+
+.free-to-carry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.free-to-carry label {
+    padding: 0;
+    text-transform: uppercase;
+    height: 28px;
+    font-size: 12px;
+}
+
 .labeled_input {
     display: flex;
     flex-direction: column;
